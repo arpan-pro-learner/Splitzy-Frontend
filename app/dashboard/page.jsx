@@ -2,19 +2,10 @@
 
 import React from "react";
 
+
 export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Header */}
-      <header className="bg-blue-600 text-white p-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Splitzy</h1>
-        <nav className="flex gap-4">
-          <a href="#" className="hover:underline">Dashboard</a>
-          <a href="#" className="hover:underline">Groups</a>
-          <a href="#" className="hover:underline">Profile</a>
-        </nav>
-      </header>
-
       {/* Main Content */}
       <main className="p-6 space-y-6">
         {/* Summary Section */}
@@ -37,19 +28,27 @@ export default function Dashboard() {
           <h2 className="text-xl font-semibold mb-4">Balances</h2>
           <ul>
             <li className="flex justify-between items-center mb-3">
-              <p className="text-gray-700">You owe <span className="font-semibold">John</span></p>
+              <p className="text-gray-700">
+                You owe <span className="font-semibold">John</span>
+              </p>
               <p className="text-red-500">-$50.00</p>
             </li>
             <li className="flex justify-between items-center mb-3">
-              <p className="text-gray-700">You owe <span className="font-semibold">Anna</span></p>
+              <p className="text-gray-700">
+                You owe <span className="font-semibold">Anna</span>
+              </p>
               <p className="text-red-500">-$75.00</p>
             </li>
             <li className="flex justify-between items-center mb-3">
-              <p className="text-gray-700"><span className="font-semibold">Emma</span> owes you</p>
+              <p className="text-gray-700">
+                <span className="font-semibold">Emma</span> owes you
+              </p>
               <p className="text-green-500">+$100.00</p>
             </li>
             <li className="flex justify-between items-center">
-              <p className="text-gray-700"><span className="font-semibold">Alex</span> owes you</p>
+              <p className="text-gray-700">
+                <span className="font-semibold">Alex</span> owes you
+              </p>
               <p className="text-green-500">+$50.00</p>
             </li>
           </ul>
@@ -73,13 +72,15 @@ export default function Dashboard() {
             </li>
             <li className="mb-3">
               <p className="text-gray-700">
-                You added an expense with <span className="font-semibold">Emma</span>: "Dinner"
+                You added an expense with{" "}
+                <span className="font-semibold">Emma</span>: "Dinner"
               </p>
               <span className="text-gray-500 text-sm">3 days ago</span>
             </li>
             <li>
               <p className="text-gray-700">
-                <span className="font-semibold">Alex</span> added an expense: "Movie Tickets"
+                <span className="font-semibold">Alex</span> added an expense:
+                "Movie Tickets"
               </p>
               <span className="text-gray-500 text-sm">1 week ago</span>
             </li>
@@ -91,11 +92,16 @@ export default function Dashboard() {
           <h2 className="text-xl font-semibold mb-4">Upcoming Payments</h2>
           <ul>
             <li className="flex justify-between items-center mb-3">
-              <p className="text-gray-700">Rent (due to <span className="font-semibold">Anna</span>)</p>
+              <p className="text-gray-700">
+                Rent (due to <span className="font-semibold">Anna</span>)
+              </p>
               <p className="text-gray-500">$500.00</p>
             </li>
             <li className="flex justify-between items-center mb-3">
-              <p className="text-gray-700">Electricity Bill (shared with <span className="font-semibold">John</span>)</p>
+              <p className="text-gray-700">
+                Electricity Bill (shared with{" "}
+                <span className="font-semibold">John</span>)
+              </p>
               <p className="text-gray-500">$75.00</p>
             </li>
             <li className="flex justify-between items-center">
@@ -116,17 +122,7 @@ export default function Dashboard() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white p-4 mt-6">
-        <div className="flex justify-between items-center">
-          <p>&copy; 2025 Splitzy. All rights reserved.</p>
-          <nav className="flex gap-4">
-            <a href="#" className="hover:underline">Help</a>
-            <a href="#" className="hover:underline">Privacy</a>
-            <a href="#" className="hover:underline">Terms</a>
-          </nav>
-        </div>
-      </footer>
+      
     </div>
   );
 }

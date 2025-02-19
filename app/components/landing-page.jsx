@@ -15,7 +15,8 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Header } from "./Header";
+import Footer from "./Footer";
+
 
 export default function LandingPage() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -73,13 +74,12 @@ export default function LandingPage() {
       quote: "Perfect for our group trips—no more guessing who owes who!",
       author: "Mike R.",
       role: "Professional",
-      avatar: "/placeholder.svg?height=64&width=64",
+      avatar: "/User01.jpg?height=64&width=64",
     },
   ];
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-blue-500/10 via-blue-400/5 to-background px-4 py-16 md:py-24 lg:py-32">
         <div className="container mx-auto">
@@ -101,18 +101,20 @@ export default function LandingPage() {
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Button
                   size="lg"
-                  className="gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 >
+                 <Link href="/sign-up">
                   Get Started for Free
-                  <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </Button>
                 <Button
                   size="lg"
-                  variant="outline"
+                 
                   onClick={() => setIsVideoPlaying(true)}
-                  className="transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 >
-                  See How It Works
+
+                <Link href="#how-it-works">See How It Works  </Link>  
                 </Button>
               </div>
             </motion.div>
@@ -136,7 +138,7 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section className="px-4 py-16 md:py-24">
+      <section id="features" className="px-4 py-16 md:py-24">
         <div className="container mx-auto">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -174,7 +176,7 @@ export default function LandingPage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="bg-muted/50 px-4 py-16 md:py-24">
+      <section id="how-it-works" className="bg-muted/50 px-4 py-16 md:py-24">
         <div className="container mx-auto">
           <h2 className="text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             How Splitzy Makes It Easy
@@ -215,7 +217,7 @@ export default function LandingPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="px-4 py-16 md:py-24">
+      <section id="people-love-us" className="px-4 py-16 md:py-24">
         <div className="container mx-auto">
           <h2 className="text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Loved by Users Like You
@@ -258,9 +260,12 @@ export default function LandingPage() {
           <div className="mt-12 text-center">
             <Button
               size="lg"
-              className="gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             >
-              Join Splitzy Today
+              <Link href="/sign-up">
+               Join Splitzy Today
+              </Link>
+             
               <ChevronRight className="h-4 w-4" />
             </Button>
           </div>
@@ -268,133 +273,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t bg-muted/50 px-4 py-8">
-        <div className="container mx-auto">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <h3 className="font-semibold">Product</h3>
-              <ul className="mt-4 space-y-2">
-                <li>
-                  <Link
-                    href="#features"
-                    className="text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#how-it-works"
-                    className="text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    How It Works
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#pricing"
-                    className="text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    Pricing
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold">Company</h3>
-              <ul className="mt-4 space-y-2">
-                <li>
-                  <Link
-                    href="/about"
-                    className="text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/blog"
-                    className="text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/careers"
-                    className="text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    Careers
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold">Support</h3>
-              <ul className="mt-4 space-y-2">
-                <li>
-                  <Link
-                    href="/help"
-                    className="text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    Help Center
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/privacy"
-                    className="text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    Privacy
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold">Legal</h3>
-              <ul className="mt-4 space-y-2">
-                <li>
-                  <Link
-                    href="/terms"
-                    className="text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    Terms
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/privacy"
-                    className="text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    Privacy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/cookies"
-                    className="text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    Cookies
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 border-t pt-8 text-center">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Splitzy. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+ 
     </div>
   );
 }
